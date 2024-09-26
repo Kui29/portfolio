@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kui's- Portfolio</title>
+    <link rel="stylesheet" href="mystylesheet.css">
+</head>
+<body>
+    <!-- Navigation Section with ARIA -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="region" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Hello, I'm <span>Liz </span></h1>
+        <p>A passionate Data Scientist</p>
+        <a href="#contact" class="btn" aria-label="Contact Me Button">Get In Touch</a>
+    </section>
+
+    <!-- About Section with ARIA -->
+    <section id="about" role="region" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+            I am a web developer with experience in building responsive websites using HTML, CSS, and JavaScript. I love learning new technologies and applying them to real-world projects.
+        </p>
+    </section>
+
+    <!-- Skills Section with ARIA -->
+    <section id="skills" role="region" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills-container">
+            <div class="skill" role="listitem">
+                <h3>HTML</h3>
+            </div>
+            <div class="skill" role="listitem">
+                <h3>CSS</h3>
+            </div>
+            <div class="skill" role="listitem">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill" role="listitem">
+                <h3>React</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with ARIA -->
+    <section id="projects" role="region" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="projects-container" role="list">
+            <div class="project" role="listitem">
+                <h3>Project 1</h3>
+                <p>A description of the project goes here.</p>
+            </div>
+            <div class="project" role="listitem">
+                <h3>Project 2</h3>
+                <p>A description of the project goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with ARIA -->
+    <section id="contact" role="region" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <form role="form" aria-labelledby="contact-form">
+            <input type="text" placeholder="Your Name" aria-required="true" required>
+            <input type="email" placeholder="Your Email" aria-required="true" required>
+            <textarea placeholder="Your Message" aria-required="true" required></textarea>
+            <button type="submit" aria-label="Submit Contact Form">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer with ARIA -->
+    <footer role="contentinfo">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
