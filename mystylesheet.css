@@ -30,10 +30,13 @@ header ul li a {
 }
 
 .hero {
-    background-color: #4CAF50;
-    color: white;
+    background-image: url(bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: black;
     padding: 100px 20px;
     text-align: center;
+
 }
 
 .hero h1 {
@@ -53,8 +56,19 @@ header ul li a {
     font-size: 1rem;
 }
 
+.hover-bg {
+    background-image: url('bg.jpg');  /* Default background image */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;  /* Optional: Text color */
+    z-index: 1;  /* Ensure text stays on top */
+    text-align: center; /* Optional: Center text */
+    padding: 50px;
+}
+
 section {
-    padding: 50px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -66,6 +80,36 @@ section h2 {
 #about p {
     max-width: 800px;
     margin: 0 auto;
+}
+.bg2 {
+    background-image: url('bg2.jpg');  /* Default background image */
+    position: relative;
+    background-size: cover;
+    color: black;  /* Optional: Text color */
+    z-index: 1;  /* Ensure text stays on top */
+    text-align: center; /* Optional: Center text */
+    padding: 50px;
+}
+
+.bg2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg2.jpg');  /* Default background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;  /* Initial opacity for the background */
+    z-index: -1;  /* Place background behind the text */
+    transition: background-image 0.5s ease, opacity 0.5s ease;  /* Smooth transition */
+}
+
+.bg2:hover::before {
+    background-image: url('bg.jpg');  /* Change background image on hover */
+    opacity: 0.4;  /* Optional: Increase opacity on hover */
 }
 
 .skills-container {
@@ -89,12 +133,30 @@ section h2 {
     gap: 20px;
 }
 
-.project {
-    background-color: #f4f4f4;
+.project1 {
+    background-color: gray;
+    background-repeat: no-repeat;
     padding: 20px;
     border-radius: 5px;
     width: 300px;
-    text-align: left;
+    text-align: center;
+}
+
+.project2 {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+}
+.project3 {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
 }
 
 #contact form {
@@ -131,4 +193,14 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.hey {
+    background-image: url('me2.jpeg');  /* Default background image */
+    position: relative;
+    background-size: cover;
+    color: black;  /* Optional: Text color */
+    z-index: 1;  /* Ensure text stays on top */
+    text-align: center; /* Optional: Center text */
+    padding: 50px;
 }
